@@ -51,6 +51,6 @@ Program results: In folder: "test_videos_output/solidWhiteRight.mp4"
 
 ### 4. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+* A possible improvement would be to use another efficient detection algorithm and to study how to find white/yellow color
+more efficiently.
+* Another potential improvement could be to implement a parallel/distributed algorithm for this pipeline algorithm.
