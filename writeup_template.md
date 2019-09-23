@@ -37,11 +37,11 @@ Links:
 3. Canny Edge Detector: (https://www.youtube.com/watch?v=sRFM5IEqR2w)
 4. Gaussian Blur: (https://www.youtube.com/watch?v=C_zFhWdM4ic)
 5. Hough Transform: (https://www.youtube.com/watch?v=4zHbI-fFIlI)
-6. Project references from the web: (https://medium.com/@c.ramprasad273/self-driving-car-nanodegree-udacity-project-1-finding-lane-lines-on-the-road-6b3c208aeada)
+6. Other: (https://medium.com/@c.ramprasad273/self-driving-car-nanodegree-udacity-project-1-finding-lane-lines-on-the-road-6b3c208aeada)
 
 ### 2. Results:
 
-Video 1: In folder: "test_videos_output/solidWhiteRight.mp4"
+Program results: In folder: "test_videos_output/solidWhiteRight.mp4"
 
 ### 3. Potential shortcomings with your current pipeline
 
