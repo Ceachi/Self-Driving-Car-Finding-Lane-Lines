@@ -29,7 +29,7 @@ My pipeline consisted of 7 steps: <br/>
 * STEP 7: I test the algorithm on a video with the road. <br/>
 
 Some simple code examples, vor every step: <br/>
-![alt text](https://github.com/Ceachi/Self-Driving-Car-Finding-Lane-Lines/computer_vision_concepts/color_selection)
+![Color selection](https://github.com/Ceachi/Self-Driving-Car-Finding-Lane-Lines/blob/master/computer_vision_concepts/color_selection.PNG)
 
 ### 2. Results:
 
