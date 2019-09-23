@@ -1,5 +1,11 @@
 # **Finding Lane Lines on the Road** 
 
+## Writeup Template
+
+### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
+
+---
+
 **Finding Lane Lines on the Road**
 
 The goals / steps of this project are the following:
@@ -15,33 +21,26 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-### 1. Objectives
+### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-The concepts used from Computer Vision to implement this projects are: Color Selection, Grayscaling, Gaussian smoothing, Canny Edge Detection, Region of Interest Mask, Implementing a Hough Transform on Edge Detected Image.<br/>
+My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
 
-My pipeline consisted of 7 steps: <br/>
-* STEP 1: I converted the images to gray scale; 
-* STEP 2: To reduce the noise in the image, I applied Gaussian Blur method, using kernel_size = 5; 
-* STEP 3: To find the edges of the lane lines in an image of the road, I used Canny Edge Detection algorithm;
-* STEP 4: Then I marked the region of interest inside the image (4 vertices polygon, based on the dimensions of the image); 
-* STEP 5: I applied Hough Transform to extract the lines that we want in the image; 
-* STEP 6: I draw the lines in the image; <br/>
-* STEP 7: I test the algorithm on a video with the road. <br/>
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
-Some simple code examples, vor every step: <br/>
-![Color selection](https://github.com/Ceachi/Self-Driving-Car-Finding-Lane-Lines/blob/master/computer_vision_concepts/color_selection.PNG)
+If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
-### 2. Results:
-
-Video 1: In folder: "test_videos_output/solidWhiteRight.mp4"
-
-### 3. Potential shortcomings with your current pipeline
-
-* One potential shortcoming would be what would happen when the color of lines are not white;
-* Another shortcoming could be the detection of lines when is night.
+![alt text][image1]
 
 
-### 4. Suggest possible improvements to your pipeline
+### 2. Identify potential shortcomings with your current pipeline
+
+
+One potential shortcoming would be what would happen when ... 
+
+Another shortcoming could be ...
+
+
+### 3. Suggest possible improvements to your pipeline
 
 A possible improvement would be to ...
 
