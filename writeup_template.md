@@ -29,10 +29,15 @@ My pipeline consisted of 7 steps: <br/>
 * STEP 7: I test the algorithm on a video with the road. <br/>
 
 Some simple code examples, vor every step: <br/>
-![Code templates](https://github.com/Ceachi/Self-Driving-Car-Finding-Lane-Lines/tree/master/computer_vision_concepts) <br/>
+(https://github.com/Ceachi/Self-Driving-Car-Finding-Lane-Lines/tree/master/computer_vision_concepts) <br/>
 
 Links:
-1. Why do we convert RGB to GrayScale: (https://www.quora.com/In-image-processing-applications-why-do-we-convert-from-RGB-to-Grayscale) <br/>
+1. Why do we convert RGB to GrayScale: (https://www.quora.com/In-image-processing-applications-why-do-we-convert-from-RGB-to-Grayscale)
+2. Finding Edges: (https://www.youtube.com/watch?v=uihBwtPIBxM)
+3. Canny Edge Detector: (https://www.youtube.com/watch?v=sRFM5IEqR2w)
+4. Gaussian Blur: (https://www.youtube.com/watch?v=C_zFhWdM4ic)
+5. Hough Transform: (https://www.youtube.com/watch?v=4zHbI-fFIlI)
+6. Project references from the web: (https://medium.com/@c.ramprasad273/self-driving-car-nanodegree-udacity-project-1-finding-lane-lines-on-the-road-6b3c208aeada)
 
 ### 2. Results:
 
