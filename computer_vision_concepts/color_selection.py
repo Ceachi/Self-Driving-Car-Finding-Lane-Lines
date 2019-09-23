@@ -8,57 +8,42 @@ image = mpimg.imread('test.jpg')
 # Grab the x and y size and make a copy of the image
 ysize = image.shape[0]
 xsize = image.shape[1]
+
 color_select = np.copy(image)
-line_image = np.copy(image)
 
 # Define color selection criteria
-# MODIFY THESE VARIABLES TO MAKE YOUR COLOR SELECTION
+###### MODIFY THESE VARIABLES TO MAKE YOUR COLOR SELECTION
 red_threshold = 200
 green_threshold = 200
 blue_threshold = 200
-
+######
 rgb_threshold = [red_threshold, green_threshold, blue_threshold]
 
-# Define the vertices of a triangular mask.
-# Keep in mind the origin (x=0, y=0) is in the upper left
-# MODIFY THESE VALUES TO ISOLATE THE REGION 
-# WHERE THE LANE LINES ARE IN THE IMAGE
-left_bottom = [100, ysize]
-right_bottom = [850, ysize]
-apex = [int(xsize/2), int(ysize/2) + 20]
+# Do a boolean or with the "|" character to identify
+# pixels below the thresholds
 
-# Perform a linear fit (y=Ax+B) to each of the three sides of the triangle
-# np.polyfit returns the coefficients [A, B] of the fit
-fit_left = np.polyfit((left_bottom[0], apex[0]), (left_bottom[1], apex[1]), 1)
-fit_right = np.polyfit((right_bottom[0], apex[0]), (right_bottom[1], apex[1]), 1)
-fit_bottom = np.polyfit((left_bottom[0], right_bottom[0]), (left_bottom[1], right_bottom[1]), 1)
 
-# Mask pixels below the threshold
-color_thresholds = (image[:,:,0] < rgb_threshold[0]) | \
-                    (image[:,:,1] < rgb_threshold[1]) | \
-                    (image[:,:,2] < rgb_threshold[2])
+#We use "|" because we want to select only the pixels below thresholds
+# true | false = true
+thresholds = (image[:,:,0] < rgb_threshold[0]) \
+            | (image[:,:,1] < rgb_threshold[1]) \
+            | (image[:,:,2] < rgb_threshold[2])
 
-# Find the region inside the lines
-XX, YY = np.meshgrid(np.arange(0, xsize), np.arange(0, ysize))
-region_thresholds = (YY > (XX*fit_left[0] + fit_left[1])) & \
-                    (YY > (XX*fit_right[0] + fit_right[1])) & \
-                    (YY < (XX*fit_bottom[0] + fit_bottom[1]))
-                    
-# Mask color and region selection
-# Tot ce este in afara regiunii de interes => negru
-# Tot ce este in regiunea de interes si nu sunt linii albe => negru
-color_select[color_thresholds | ~region_thresholds] = [0, 0, 0]
-# Color pixels red where both color and region selections met
-# Tot ce este alb in regiunea de interes devine rosu
-line_image[~color_thresholds & region_thresholds] = [255, 0, 0]
+print("Now we are printing thresholds:")
+print(thresholds.shape)        
+print("until here")
 
-print(color_thresholds)
-print(~color_thresholds)
+v = np.array([1,2,3,4,5])
+p = np.array([True,False,True,False,True])
+v[p] = 5
+print(v)
 
-# Display the image and show region and color selections
-plt.imshow(image)
-x = [left_bottom[0], right_bottom[0], apex[0], left_bottom[0]]
-y = [left_bottom[1], right_bottom[1], apex[1], left_bottom[1]]
-plt.plot(x, y, 'b--', lw=4)
+
+
+color_select[thresholds] = [0,0,0]
+
+# Display the image                 
 plt.imshow(color_select)
-plt.imshow(line_image)
+
+# Uncomment the following code if you are running the code locally and wish to save the image
+# mpimg.imsave("test-after.png", color_select)
