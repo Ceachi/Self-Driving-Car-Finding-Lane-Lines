@@ -23,14 +23,14 @@ The goals / steps of this project are the following:
 
 ### 1. Objectives
 
-My pipeline consisted of 7 steps:
-STEP 1: I converted the images to gray scale;
-STEP 2: To reduce the noise in the image, I applied Gaussian Blur method, using kernel_size = 5;
-STEP 3: To find the edges of the lane lines in an image of the road, I used Canny Edge Detection algorithm;
-STEP 4: Then I marked the region of interest inside the image (4 vertices polygon, based on the dimensions of the image);
-STEP 5: I applied Hough Transform to extract the lines that we want in the image;
-STEP 6: I draw the lines in the image;
-STEp 7: I test the algorithm on a video with the road.
+My pipeline consisted of 7 steps: <br/>
+* STEP 1: I converted the images to gray scale; 
+* STEP 2: To reduce the noise in the image, I applied Gaussian Blur method, using kernel_size = 5; 
+* STEP 3: To find the edges of the lane lines in an image of the road, I used Canny Edge Detection algorithm;
+* STEP 4: Then I marked the region of interest inside the image (4 vertices polygon, based on the dimensions of the image); 
+* STEP 5: I applied Hough Transform to extract the lines that we want in the image; 
+* STEP 6: I draw the lines in the image; <br/>
+* STEP 7: I test the algorithm on a video with the road. <br/>
 
 ### 2. Results:
 
